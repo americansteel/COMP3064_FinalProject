@@ -7,8 +7,8 @@ Platformer game for the final project of COMP3064 Game Development
 - [ ] Sean: Screen Layout 
 - [ ] Sean: UI Flow Diagram
 - [ ] Dylan: High Level Description
-- [ ] Nooran: Game Assets
+- [X] Nooran: Game Assets
 - [ ] Dylan: Backstory
-- [ ] Nooran: Game Mechanics
+- [?] Nooran: Game Mechanics
 
 
