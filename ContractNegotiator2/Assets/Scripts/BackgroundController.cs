@@ -41,7 +41,6 @@ public class BackgroundController : MonoBehaviour {
 
 
 	private void Reset(){
-
 		_currentPos = new Vector2 (startX, 0);
 	}
 }
