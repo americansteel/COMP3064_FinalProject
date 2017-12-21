@@ -38,7 +38,6 @@ public class Player : MonoBehaviour {
 
 		//check if player is grounded
 		isGrounded = IsGrounded ();
-		Debug.Log (isGrounded);
 		HandleMovement ();
 		HandleLayers ();
 		Reset ();
@@ -88,7 +87,6 @@ public class Player : MonoBehaviour {
 						myAnimator.ResetTrigger ("jump");
 						myAnimator.SetBool ("land", false);
 						return true;
-						Debug.Log ("player grounded");
 					}
 				
 				}

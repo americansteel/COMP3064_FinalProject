@@ -1,10 +1,11 @@
-/[Ll]ibrary/
+B/[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
 /Assets/AssetStoreTools*
 
+/Temp/*
 # Visual Studio 2015 cache directory
 /.vs/
 
@@ -32,3 +33,6 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+
+#Temp folder
+ContractNegotiator2/Temp/*
