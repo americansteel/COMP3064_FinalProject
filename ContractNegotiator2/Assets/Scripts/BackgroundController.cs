@@ -35,6 +35,7 @@ public class BackgroundController : MonoBehaviour {
 			Reset ();
 		}
 		//apply changes
+		PlayerClass.Instance.Score +=1;
 		_transform.position = _currentPos;
 
 	}

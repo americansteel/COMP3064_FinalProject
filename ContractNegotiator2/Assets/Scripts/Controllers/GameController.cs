@@ -15,8 +15,6 @@ public class GameController : MonoBehaviour {
 	Text gameOverLabel;
 	[SerializeField]
 	Text highScoreLabel;
-	[SerializeField]
-	Button resetBtn;
 
 	private void initialize(){
 
