@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour {
 
+	Animator myAnimator;
 	// Use this for initialization
 	void Start () {
-		
+		myAnimator = gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -17,6 +18,8 @@ public class PlayerCollision : MonoBehaviour {
 	{
 		if (other.gameObject.tag.Equals ("enemy")) {
 			Debug.Log ("Collision with Enemy");
+			//PlayerClass.Instance.Life -= 1;
+			myAnimator.SetTrigger ("die");
 		}
 	}
 }
