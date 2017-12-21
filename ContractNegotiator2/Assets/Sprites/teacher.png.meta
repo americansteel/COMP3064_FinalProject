@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 77f74398d2fc3a441974fb8d2f32e268
-timeCreated: 1513541054
+timeCreated: 1513885315
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -8,7 +8,7 @@ TextureImporter:
     21300002: teacher_jump2
     21300004: teacher_jump3
     21300006: teacher_jump4
-    21300008: teacher_4
+    21300008: teacher_jump5
     21300010: teacher_run1
     21300012: teacher_run2
     21300014: teacher_run3
@@ -147,7 +147,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: teacher_4
+      name: teacher_jump5
       rect:
         serializedVersion: 2
         x: 63
