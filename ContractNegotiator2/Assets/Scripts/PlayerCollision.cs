@@ -16,9 +16,11 @@ public class PlayerCollision : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag.Equals ("enemy")) {
+		if (other.gameObject.tag.Equals ("car") || 
+			other.gameObject.tag.Equals("bus")) {
+
 			Debug.Log ("Collision with Enemy");
-			//PlayerClass.Instance.Life -= 1;
+			PlayerClass.Instance.Life -= 1;
 			myAnimator.SetTrigger ("die");
 		}
 	}

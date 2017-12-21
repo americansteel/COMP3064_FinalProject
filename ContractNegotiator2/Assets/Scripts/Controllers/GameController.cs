@@ -6,7 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour {
 
-
+	[SerializeField]
+	GameObject car;
+	[SerializeField]
+	GameObject bus;
 	[SerializeField]
 	Text lifeLabel;
 	[SerializeField]
@@ -15,6 +18,7 @@ public class GameController : MonoBehaviour {
 	Text gameOverLabel;
 	[SerializeField]
 	Text highScoreLabel;
+
 
 	private void initialize(){
 
@@ -25,6 +29,7 @@ public class GameController : MonoBehaviour {
 		highScoreLabel.gameObject.SetActive (false);
 		lifeLabel.gameObject.SetActive (true);
 		scoreLabel.gameObject.SetActive (true);
+
 	}
 
 	public void gameOver(){
@@ -45,10 +50,34 @@ public class GameController : MonoBehaviour {
 	void Start () {
 		PlayerClass.Instance.gCtrl = this;
 		initialize ();
+		StartCoroutine( AddCar(car, bus) );
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		
+	}
+
+
+	public IEnumerator AddCar(GameObject car, GameObject bus)
+	// spawns a car in a random amount of time. if it took a while (5s) it spawns a bus too.
+	{
+		int time = Random.Range (1, 5);
+		yield return new WaitForSeconds ((float)time);
+		Instantiate (car);
+		StartCoroutine (AddBus(bus));
+		if(time > 4)
+		{
+			AddBus(bus);
+		}
+		StartCoroutine (AddCar(car,bus));
+	}
+
+	public IEnumerator AddBus(GameObject bus)
+	// adds a bus to the scene
+	{
+		int time = Random.Range (3, 10);
+		yield return new WaitForSeconds ((float)time);
+		Instantiate (bus);
 	}
 }

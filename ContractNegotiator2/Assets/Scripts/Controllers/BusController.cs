@@ -14,8 +14,8 @@ public class BusController : MonoBehaviour {
 	private float streetY;
 
 
-	private Transform _transform;
-	private Vector2 _currentPosition;
+	Transform _transform;
+	Vector2 _currentPosition;
 
 
 	// Use this for initialization
@@ -31,17 +31,21 @@ public class BusController : MonoBehaviour {
 		_currentPosition = _transform.position;
 		//move bus left
 		_currentPosition -= new Vector2 (speed, 0);
-
-		if (_currentPosition.x < endX) {
-			//reset object on leaving screen
-			Reset();
-		}
 		_transform.position = _currentPosition;
+
+		if (_currentPosition.x <= endX) {
+
+			if (_currentPosition.x <= endX) {
+				//reset object on leaving screen
+				Destroy(this.gameObject);
+			}
+			Destroy(this.gameObject);
+		}
 
 	}
 
 	void Reset (){
-		_currentPosition = new Vector2 (Random.Range(startX, startX + 10000), streetY);
+		_transform.position = new Vector2 (Random.Range(startX, startX + 10000), streetY);
 	}
 }
 	
