@@ -20,8 +20,12 @@ public class PlayerCollision : MonoBehaviour {
 			other.gameObject.tag.Equals("bus")) {
 
 			Debug.Log ("Collision with Enemy");
-			PlayerClass.Instance.Life -= 1;
+
 			myAnimator.SetTrigger ("die");
+			PlayerClass.Instance.Life -= 1;
+			if (PlayerClass.Instance.Life > 0) {
+				myAnimator.ResetTrigger ("die");
+			}
 		}
 	}
 }
