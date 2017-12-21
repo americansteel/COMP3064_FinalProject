@@ -23,9 +23,33 @@ public class PlayerCollision : MonoBehaviour {
 
 			myAnimator.SetTrigger ("die");
 			PlayerClass.Instance.Life -= 1;
+
+			StartCoroutine ("Blink");
+
 			if (PlayerClass.Instance.Life > 0) {
 				myAnimator.ResetTrigger ("die");
 			}
 		}
 	}
+	private IEnumerator Blink(){
+		//makes the player avatar flash to show damage
+		Color c;
+		Renderer renderer = 
+			gameObject.GetComponent<Renderer> ();
+		for (int i = 0; i < 3; i++) {
+			for (float f = 1f; f >= 0; f -= 0.1f) {
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds (.1f);
+			}
+			for (float f = 0f; f <= 1; f += 0.1f) {
+				c = renderer.material.color;
+				c.a = f;
+				renderer.material.color = c;
+				yield return new WaitForSeconds (.1f);
+			}
+		}
+	}
+
 }

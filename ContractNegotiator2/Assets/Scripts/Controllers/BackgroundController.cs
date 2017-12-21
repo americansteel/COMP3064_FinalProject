@@ -18,6 +18,7 @@ public class BackgroundController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Time.timeScale = 1;
 		_transform = gameObject.GetComponent<Transform> ();
 		_currentPos = _transform.position;
 		Reset ();
@@ -25,19 +26,21 @@ public class BackgroundController : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		_currentPos = _transform.position;
-		//move ocean down
-		_currentPos -= new Vector2 (speed, 0);
 
-		//check if we need to reset
-		if (_currentPos.x < endX) {
-			//reset
-			Reset ();
+		if (Time.timeScale != 0) {
+			_currentPos = _transform.position;
+			//move ocean down
+			_currentPos -= new Vector2 (speed, 0);
+
+			//check if we need to reset
+			if (_currentPos.x < endX) {
+				//reset
+				Reset ();
+			}
+			//apply changes
+			PlayerClass.Instance.Score += 1;
+			_transform.position = _currentPos;
 		}
-		//apply changes
-		PlayerClass.Instance.Score +=1;
-		_transform.position = _currentPos;
-
 	}
 
 

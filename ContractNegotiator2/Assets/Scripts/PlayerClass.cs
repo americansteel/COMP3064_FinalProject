@@ -21,12 +21,17 @@ public class PlayerClass {
 
 	private int _score = 0;
 	private int _life = 3;
+	private static int _highscore = PlayerPrefs.GetInt("highscore", _highscore);
 
 	public int Score {
 		get { return _score; }
 		set
 		{ 
 			_score = value;
+			if (_score > _highscore) {
+				_highscore = _score;
+				PlayerPrefs.SetInt ("highscore", _highscore);
+			}
 			gCtrl.updateUI ();
 		}
 	}
@@ -38,6 +43,7 @@ public class PlayerClass {
 
 			if (_life <= 0) {
 				gCtrl.gameOver ();
+				Time.timeScale = 0;
 			} else
 			{
 				gCtrl.updateUI ();

@@ -18,6 +18,8 @@ public class GameController : MonoBehaviour {
 	Text gameOverLabel;
 	[SerializeField]
 	Text highScoreLabel;
+	[SerializeField]
+	Button resetButton;
 
 
 	private void initialize(){
@@ -29,12 +31,14 @@ public class GameController : MonoBehaviour {
 		highScoreLabel.gameObject.SetActive (false);
 		lifeLabel.gameObject.SetActive (true);
 		scoreLabel.gameObject.SetActive (true);
+		resetButton.gameObject.SetActive (false);
 
 	}
 
 	public void gameOver(){
 		gameOverLabel.gameObject.SetActive (true);
 		highScoreLabel.gameObject.SetActive (true);
+		resetButton.gameObject.SetActive (true);
 		lifeLabel.gameObject.SetActive (false);
 		scoreLabel.gameObject.SetActive (false);
 	}
@@ -43,6 +47,7 @@ public class GameController : MonoBehaviour {
 
 		scoreLabel.text = "Score: " + PlayerClass.Instance.Score;
 		lifeLabel.text = "Life: " + PlayerClass.Instance.Life;
+		highScoreLabel.text = "High Score: " + PlayerPrefs.GetInt ("highscore");
 	}
 
 
@@ -58,6 +63,9 @@ public class GameController : MonoBehaviour {
 		
 	}
 
+	public void ResetButtonClick() {
+		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+	}
 
 	public IEnumerator AddCar(GameObject car, GameObject bus)
 	// spawns a car in a random amount of time. if it took a while (5s) it spawns a bus too.
