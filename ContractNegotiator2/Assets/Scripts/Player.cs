@@ -5,7 +5,7 @@ using UnityEngine;
  * COMP3074
  * Player
  * 
- * Nooran El-Sherif
+ * Nooran El-Sherif - 100695733
  * Description: 
  * control player character in game
  * handles movement of character (Jump and Land)

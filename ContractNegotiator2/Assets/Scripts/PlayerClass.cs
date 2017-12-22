@@ -5,7 +5,7 @@ using UnityEngine;
  * COMP3074
  * PlayerClass
  * 
- * Dylan Roberts
+ * Dylan Roberts - 100727526
  * Description: 
  * Handles Player instance
  * stores score and life info

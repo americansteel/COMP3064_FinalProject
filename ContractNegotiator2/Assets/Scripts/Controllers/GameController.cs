@@ -7,11 +7,11 @@ using UnityEngine.SceneManagement;
  * COMP3074
  * Game Controller
  * 
- * Dylan Roberts
+ * Dylan Roberts - 100727526
  * Description: 
  * controls UI elements of game
  * 
- * Sean Price
+ * Sean Price - 101015020
  * Description:
  * coroutines for spawning enemies in scene
  */

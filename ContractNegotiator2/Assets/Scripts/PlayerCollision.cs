@@ -6,12 +6,12 @@ using UnityEngine;
  * COMP3074
  * PlayerCollision
  * 
- * Nooran El-Sherif:
+ * Nooran El-Sherif - 100695733
  * Description: 
  * handles collisions with enemy objects
  * handles animations for player damage and death
  * 
- * Sean Price:
+ * Dylan Roberts - 100727526
  * Description:
  * makes player character blink upon life taken
  */
