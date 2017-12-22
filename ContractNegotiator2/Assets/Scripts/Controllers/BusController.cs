@@ -1,7 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
+ * COMP3074
+ * Bus Controller
+ * 
+ * Sean Price
+ * Description: 
+ * controls bus movement in game
+ */
 public class BusController : MonoBehaviour {
 
 	[SerializeField]

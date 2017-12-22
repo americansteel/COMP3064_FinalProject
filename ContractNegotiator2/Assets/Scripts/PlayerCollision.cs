@@ -2,6 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+ * COMP3074
+ * PlayerCollision
+ * 
+ * Nooran El-Sherif:
+ * Description: 
+ * handles collisions with enemy objects
+ * handles animations for player damage and death
+ * 
+ * Sean Price:
+ * Description:
+ * makes player character blink upon life taken
+ */
 public class PlayerCollision : MonoBehaviour {
 
 	Animator myAnimator;
