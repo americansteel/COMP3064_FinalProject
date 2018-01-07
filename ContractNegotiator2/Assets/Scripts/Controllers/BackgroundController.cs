@@ -1,13 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * COMP3074
- * Dylan Roberts - 100727526
- * BackgroundController
- * Description: 
- * control scrolling of background in game
- */
+
 public class BackgroundController : MonoBehaviour {
 
 	//Public variables

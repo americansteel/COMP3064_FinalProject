@@ -1,14 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * COMP3074
- * Car Controller
- * 
- * Sean Price - 101015020
- * Description: 
- * controls car movement in game
- */
+
 public class CarController : MonoBehaviour {
 
 

@@ -1,16 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * COMP3074
- * PlayerClass
- * 
- * Dylan Roberts - 100727526
- * Description: 
- * Handles Player instance
- * stores score and life info
- * 
- */
+
 public class PlayerClass {
 
 	static private PlayerClass _instance;

@@ -1,15 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-/*
- * COMP3074
- * Player
- * 
- * Nooran El-Sherif - 100695733
- * Description: 
- * control player character in game
- * handles movement of character (Jump and Land)
- */
+
 public class Player : MonoBehaviour {
 
 	private Rigidbody2D myRigidBody;

@@ -3,18 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-/*
- * COMP3074
- * Game Controller
- * 
- * Dylan Roberts - 100727526
- * Description: 
- * controls UI elements of game
- * 
- * Sean Price - 101015020
- * Description:
- * coroutines for spawning enemies in scene
- */
+
 public class GameController : MonoBehaviour {
 
 	[SerializeField]
