@@ -24,11 +24,14 @@ public class Player : MonoBehaviour {
 	[SerializeField]
 	private float jumpForce;
 
+
 	// Use this for initialization
 	void Start () {
 		myRigidBody = GetComponent<Rigidbody2D> ();
 		myAnimator = GetComponent<Animator> ();
+
 	}
+
 	void Update()
 	{
 		HandleInput ();
@@ -48,6 +51,7 @@ public class Player : MonoBehaviour {
 		isJumping = false;
 		isGrounded = true;
 	}
+
 	private void HandleMovement()
 	{
 		if (myRigidBody.velocity.y < 0) //if falling towards ground
@@ -60,14 +64,15 @@ public class Player : MonoBehaviour {
 			myRigidBody.AddForce (new Vector2 (0, jumpForce)); //apply upward force
 			myAnimator.SetTrigger("jump");
 		}
-		
 	}
+
 	private void HandleInput()
 	{
 		//if space bar is pressed, is jumping is true
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			isJumping = true;
 		}
+
 	}
 	private bool IsGrounded()
 	{

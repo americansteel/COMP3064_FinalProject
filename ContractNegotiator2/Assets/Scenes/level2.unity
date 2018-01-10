@@ -77,17 +77,15 @@ LightmapSettings:
     m_PVRDirectSampleCount: 32
     m_PVRSampleCount: 500
     m_PVRBounces: 2
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
-    m_PVRFilterTypeAO: 0
+    m_PVRFiltering: 0
     m_PVRFilteringMode: 1
     m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 5
     m_PVRFilteringGaussRadiusAO: 2
-    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
-    m_PVRFilteringAtrousPositionSigmaIndirect: 2
-    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_PVRFilteringAtrousColorSigma: 1
+    m_PVRFilteringAtrousNormalSigma: 1
+    m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -109,8 +107,6 @@ NavMeshSettings:
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
-    debug:
-      m_Flags: 0
   m_NavMeshData: {fileID: 0}
 --- !u!1001 &35559833
 Prefab:
@@ -221,7 +217,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4208268659269796, guid: 845f1c0ec821494409901d14b7686e37, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -342.2
+      value: -411.4
       objectReference: {fileID: 0}
     - target: {fileID: 4208268659269796, guid: 845f1c0ec821494409901d14b7686e37, type: 2}
       propertyPath: m_LocalPosition.y
@@ -250,6 +246,21 @@ Prefab:
     - target: {fileID: 4208268659269796, guid: 845f1c0ec821494409901d14b7686e37, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957769316011220, guid: 845f1c0ec821494409901d14b7686e37,
+        type: 2}
+      propertyPath: rainPosition2
+      value: -350
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957769316011220, guid: 845f1c0ec821494409901d14b7686e37,
+        type: 2}
+      propertyPath: rainPosition3
+      value: -300
+      objectReference: {fileID: 0}
+    - target: {fileID: 114957769316011220, guid: 845f1c0ec821494409901d14b7686e37,
+        type: 2}
+      propertyPath: rainPosition1
+      value: -400
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845f1c0ec821494409901d14b7686e37, type: 2}
@@ -438,6 +449,25 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c45d160f50f97df43ace854d71e751cf, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &837047823 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1094884211293674, guid: 845f1c0ec821494409901d14b7686e37,
+    type: 2}
+  m_PrefabInternal: {fileID: 120177624}
+--- !u!114 &837047831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 837047823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18adb040f7df32c40a5258b8d3820afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rainPosition1: -400
+  rainPosition2: -350
+  rainPosition3: -300
 --- !u!1001 &1532912167
 Prefab:
   m_ObjectHideFlags: 0
