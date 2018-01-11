@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerCollision : MonoBehaviour {
 
+	[SerializeField]
+	GameObject splash; 
+
 	Animator myAnimator;
+
 	// Use this for initialization
 	void Start () {
 		myAnimator = gameObject.GetComponent<Animator> ();
@@ -17,10 +21,20 @@ public class PlayerCollision : MonoBehaviour {
 	public void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag.Equals ("car") || 
-			other.gameObject.tag.Equals("bus")) {
+			other.gameObject.tag.Equals("bus") ||
+			other.gameObject.tag.Equals("rain")){
 
 			Debug.Log ("Collision with Enemy");
 
+			if(other.gameObject.tag.Equals("rain")){
+				//animate the splash
+				Instantiate(splash).GetComponent<Transform>().position =
+				other.gameObject.GetComponent<Transform>().position;
+				//disappear raindrop
+				Debug.Log("Collision with raindrop");
+				other.gameObject.GetComponent<RainController>().Reset();
+
+			}
 			myAnimator.SetTrigger ("die");
 			PlayerClass.Instance.Life -= 1;
 

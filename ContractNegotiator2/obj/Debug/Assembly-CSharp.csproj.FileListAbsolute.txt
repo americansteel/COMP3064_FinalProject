@@ -136,3 +136,4 @@ C:\dev\games\COMP3064_FinalProject-master\ContractNegotiator2\Temp\bin\Debug\Uni
 C:\dev\games\COMP3064_FinalProject-master\ContractNegotiator2\Temp\bin\Debug\UnityEngine.SpatialTracking.xml
 C:\dev\games\COMP3064_FinalProject-master\ContractNegotiator2\obj\Debug\Assembly-CSharp.dll
 C:\dev\games\COMP3064_FinalProject-master\ContractNegotiator2\obj\Debug\Assembly-CSharp.pdb
+C:\dev\games\COMP3064_FinalProject-master\ContractNegotiator2\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
