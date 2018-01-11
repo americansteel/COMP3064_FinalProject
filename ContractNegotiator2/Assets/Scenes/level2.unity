@@ -270,7 +270,7 @@ Prefab:
         type: 2}
       propertyPath: splash
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1677392131}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 845f1c0ec821494409901d14b7686e37, type: 2}
   m_IsPrefabParent: 0
