@@ -38,7 +38,7 @@ public class RainController : MonoBehaviour {
 		
 	}
 	public void Reset(){
-		_transform.position = new Vector2 (positions [Random.Range (0, 2)], startY);
+		_transform.position = new Vector2 (positions [Random.Range (0, 3)], startY);
 		speed = Random.Range (minSpeed, maxSpeed);
 
 	}

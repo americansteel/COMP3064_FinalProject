@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerClass {
 
@@ -18,7 +19,6 @@ public class PlayerClass {
 	private PlayerClass() {}
 
 	public GameController gCtrl;
-
 	private int _score = 0;
 	private int _life = 3;
 	private static int _highscore = PlayerPrefs.GetInt("highscore", _highscore);
@@ -32,6 +32,10 @@ public class PlayerClass {
 				_highscore = _score;
 				PlayerPrefs.SetInt ("highscore", _highscore);
 			}
+			else if (_score == 500){
+				SceneManager.LoadScene (3);
+			}
+			else
 			gCtrl.updateUI ();
 		}
 	}

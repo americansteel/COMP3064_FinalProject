@@ -9,6 +9,7 @@ public class PlayerCollision : MonoBehaviour {
 
 	Animator myAnimator;
 
+	private AudioSource collisionSound;
 	// Use this for initialization
 	void Start () {
 		myAnimator = gameObject.GetComponent<Animator> ();
@@ -20,18 +21,25 @@ public class PlayerCollision : MonoBehaviour {
 	}
 	public void OnTriggerEnter2D(Collider2D other)
 	{
+		collisionSound = other.GetComponent<AudioSource>();
 		if (other.gameObject.tag.Equals ("car") || 
 			other.gameObject.tag.Equals("bus") ||
 			other.gameObject.tag.Equals("rain")){
-
+		
 			Debug.Log ("Collision with Enemy");
 
 			if(other.gameObject.tag.Equals("rain")){
+				if (collisionSound != null) {
+					collisionSound.Play ();
+				}
+
 				//animate the splash
 				Instantiate(splash).GetComponent<Transform>().position =
 				other.gameObject.GetComponent<Transform>().position;
+				
 				//disappear raindrop
 				Debug.Log("Collision with raindrop");
+
 				other.gameObject.GetComponent<RainController>().Reset();
 
 			}

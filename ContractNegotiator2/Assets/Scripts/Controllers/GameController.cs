@@ -21,18 +21,18 @@ public class GameController : MonoBehaviour {
 	[SerializeField]
 	Button resetButton;
 
-
 	private void initialize(){
 
-		PlayerClass.Instance.Score = 0;
-		PlayerClass.Instance.Life = 3;
-
+		if (SceneManager.GetActiveScene ().buildIndex == 2) {
+			PlayerClass.Instance.Score = 0;
+			PlayerClass.Instance.Life = 3;
+		}
 		gameOverLabel.gameObject.SetActive (false);
 		highScoreLabel.gameObject.SetActive (false);
 		lifeLabel.gameObject.SetActive (true);
 		scoreLabel.gameObject.SetActive (true);
 		resetButton.gameObject.SetActive (false);
-
+	
 	}
 
 	public void gameOver(){
@@ -64,7 +64,10 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void ResetButtonClick() {
-		SceneManager.LoadScene (SceneManager.GetActiveScene ().name);
+		SceneManager.LoadScene(2);
+	}
+	public void LevelTwoButtonClick(){
+		SceneManager.LoadScene (3);
 	}
 
 	public IEnumerator AddCar(GameObject car, GameObject bus)
